@@ -144,7 +144,8 @@ PRODUCT_PACKAGES += \
     setcap \
     unrar \
     vim \
-    zip
+    zip \
+    bromite-webview
 
 PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
     system/bin/curl \
