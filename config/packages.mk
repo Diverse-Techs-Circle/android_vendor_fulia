@@ -26,8 +26,9 @@ PRODUCT_PACKAGES += \
     Stk \
     stats \
     ThemePicker \
-    ArrowThemesStub \
-    GameSpace
+    FuliaThemesStub \
+    GameSpace \
+    Updater
 
 # SystemUI plugins
 PRODUCT_PACKAGES += \
