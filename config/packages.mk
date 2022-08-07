@@ -24,7 +24,6 @@ PRODUCT_PACKAGES += \
     messaging \
     SimpleGallery \
     Stk \
-    stats \
     ThemePicker \
     FuliaThemesStub \
     GameSpace \
