@@ -15,12 +15,6 @@
 
 FULIA_MOD_VERSION = v1.1
 FULIA_BUILD_TYPE := UNOFFICIAL
-FULIA_BUILD_ZIP_TYPE := VANILLA
-
-ifeq ($(FULIA_GAPPS), true)
-    $(call inherit-product, vendor/gapps/common/common-vendor.mk)
-    ARROW_BUILD_ZIP_TYPE := GAPPS
-endif
 
 CURRENT_DEVICE=$(shell echo "$(TARGET_PRODUCT)" | cut -d'_' -f 2,3)
 
@@ -36,12 +30,11 @@ ifeq ($(FULIA_OFFICIAL), true)
     endif
 endif
 
-FULIA_VERSION := FuliaUI-$(FULIA_MOD_VERSION)-$(CURRENT_DEVICE)-$(FULIA_BUILD_TYPE)-$(shell date -u +%Y%m%d)-$(FULIA_BUILD_ZIP_TYPE)
+FULIA_VERSION := FuliaUI-$(FULIA_MOD_VERSION)-$(CURRENT_DEVICE)-$(FULIA_BUILD_TYPE)-$(shell date -u +%Y%m%d)
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
   ro.fulia.version=$(FULIA_VERSION) \
   ro.fulia.releasetype=$(FULIA_BUILD_TYPE) \
-  ro.fulia.ziptype=$(FULIA_BUILD_ZIP_TYPE) \
   ro.modversion=$(FULIA_MOD_VERSION)
 
 FULIA_DISPLAY_VERSION := FuliaUI-$(FULIA_MOD_VERSION)-$(FULIA_BUILD_TYPE)
